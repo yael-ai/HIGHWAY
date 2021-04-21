@@ -26,8 +26,8 @@ import sys
 #!pip install tensorboardx gym pyvirtualdisplay
 #!apt-get install -y xvfb python-opengl ffmpeg
 #!git clone https://github.com/eleurent/highway-env.git
-sys.path.insert(0,'/data/home/yael123/HIGHWAY_ALL/highway-env/scripts/')
-rl_agents_dir = '/data/home/yael123/HIGHWAY_ALL/rl-agents/'
+sys.path.insert(0,'/data/home/yael123/highway/highway-env/scripts/')
+rl_agents_dir = '/data/home/yael123/highway/rl-agents/'
 sys.path.append(rl_agents_dir)
 
 from utils import show_videos
@@ -58,12 +58,12 @@ env = load_environment(env_config)
 #env.config["lanes_count"] = 4
 #env.config["vehicles_count"]=30
 #env.config["vehicles_density"] = 2
-
-env.reset()
+#env.reset()
 agent = load_agent(agent_config, env)
-evaluation = Evaluation(env, agent, num_episodes=3000, display_env=False)
-print("20/04/2021")
-print(f"Ready to train {agent} on {env}")
+#evaluation = Evaluation(env, agent, num_episodes=3000, display_env=False)
+print("21/04/2021")
+print("NO TRAIN")
+#print(f"Ready to train {agent} on {env}")
 
 """Run tensorboard locally to visualize training."""
 
@@ -72,7 +72,7 @@ print(f"Ready to train {agent} on {env}")
 
 """Start training. This should take about an hour."""
 
-evaluation.train()
+#evaluation.train()
 
 """Progress can be visualised in the tensorboard cell above, which should update every 30s (or manually). You may need to click the *Fit domain to data* buttons below each graph.
 
@@ -86,7 +86,7 @@ env.configure({"offscreen_rendering": True})
 #env.config["lanes_count"] = 4
 #env.config["vehicles_count"]=30
 #env.config["vehicles_density"] = 2
-env.reset()
+#env.reset()
 agent = load_agent(agent_config, env)
 evaluation = Evaluation(env, agent, num_episodes=3000, recover=True)
 evaluation.test()
