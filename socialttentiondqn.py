@@ -60,10 +60,10 @@ env = load_environment(env_config)
 #env.config["vehicles_density"] = 2
 #env.reset()
 agent = load_agent(agent_config, env)
-#evaluation = Evaluation(env, agent, num_episodes=3000, display_env=False)
+evaluation = Evaluation(env, agent, num_episodes=3000, display_env=False)
 print("21/04/2021")
-print("NO TRAIN")
-#print(f"Ready to train {agent} on {env}")
+print("6 lanes")
+print(f"Ready to train {agent} on {env}")
 
 """Run tensorboard locally to visualize training."""
 
@@ -72,7 +72,7 @@ print("NO TRAIN")
 
 """Start training. This should take about an hour."""
 
-#evaluation.train()
+evaluation.train()
 
 """Progress can be visualised in the tensorboard cell above, which should update every 30s (or manually). You may need to click the *Fit domain to data* buttons below each graph.
 
