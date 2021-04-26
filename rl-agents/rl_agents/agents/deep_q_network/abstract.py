@@ -82,7 +82,7 @@ class AbstractDQNAgent(AbstractStochasticAgent, ABC):
         values = self.get_state_action_values(state)
         self.exploration_policy.update(values)
         df = pd.Series([values])
-        df.to_csv('/data/home/yael123/highway/value_file_01_04.csv', mode='a', header=False)
+        df.to_csv('/data/home/yael123/highway/value_file_26_04.csv', mode='a', header=False)
 
         return self.exploration_policy.sample()
 
