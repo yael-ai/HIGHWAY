@@ -109,7 +109,7 @@ def get_top_no_duplicates(video_num_no_duplicates):
 
 if __name__ == '__main__':
     # read the value file and add columns names
-    df_value = pd.read_csv("value_file_20_04.csv", header=None)
+    df_value = pd.read_csv("value_file_26_04.csv", header=None)
     df_value.columns = ['index','value']
     #df_value = df_value.drop(df_value.index[0])
     new_values = []
@@ -141,7 +141,7 @@ if __name__ == '__main__':
     top = get_top_no_duplicates(video_num_no_duplicates)
     results = pd.DataFrame()
     results['top'] = top
-    results['top'].to_csv('C:/Users/yael/Documents/GitHub/HIGHWAY_ALL/results_file.csv', mode='a', header=False)
+    results['top'].to_csv('C:/Users/yael/Documents/GitHub/highway/results_file.csv', mode='a', header=False)
 
 
 

@@ -44,7 +44,7 @@ if __name__ == '__main__':
 
     #path = 'C:/Users/yael/PycharmProjects/importance/ABS_IMPORTANT TOP 30'
     #path = 'C:/Users/yael/Documents/GitHub/HIGHWAY_ALL/try'
-    path = 'C:/Users/yael/Documents/GitHub/HIGHWAY_ALL/TOP 30_ABS'
+    path = 'C:/Users/yael/Documents/GitHub/highway/TOP 30 ABS'
     files = os.listdir(path)
     df_value = pd.read_csv('results_file.csv', header =None)
     video_num = []

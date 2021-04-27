@@ -72,7 +72,7 @@ def get_the_key_of_a_value(dic,max_value,all_imp_values):
 
 if __name__ == '__main__':
     # read the value file and add columns names
-    df_value = pd.read_csv("value_file_20_04.csv", header=None)
+    df_value = pd.read_csv("value_file_26_04.csv", header=None)
     df_value.columns = ['index','value']
    # df_value = df_value.drop(df_value.index[0])
     new_values = []
@@ -106,7 +106,7 @@ if __name__ == '__main__':
     top = max_important_in_dic(dic)
     results = pd.DataFrame()
     results['top'] = top
-    results['top'].to_csv('C:/Users/yael/Documents/GitHub/HIGHWAY_ALL/results_file_highlights.csv', mode='a', header=False)
+    results['top'].to_csv('C:/Users/yael/Documents/GitHub/highway/results_file_highlights.csv', mode='a', header=False)
     print("top:",top)
 
 

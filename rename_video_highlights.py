@@ -43,7 +43,7 @@ def sort_all_parameters_by_video_number(video_num, list_sec, list_val,list_index
 
 
 if __name__ == '__main__':
-    path = 'C:/Users/yael/Documents/GitHub/HIGHWAY_ALL/TOP 30 IMP_HIGH'
+    path = 'C:/Users/yael/Documents/GitHub/highway/TOP 30 HIGHLIGHT'
     files = os.listdir(path)
     df_value = pd.read_csv('results_file_highlights.csv', header =None)
     video_num = []
